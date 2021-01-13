@@ -1,0 +1,14 @@
+
+
+
+Wally, this loads for me on 11.4.1 HF3
+
+tmsh create ltm rule /Common/my_rule_rule when HTTP_REQUEST { if { [class match [HTTP::uri] contains this_uri] } { pool my_test_pool_1 } else { pool my_test_pool_2 }}
+
+Removed the "{" between rule name and when statement and corresponding "}" at the end.
+
+Couple other notes: - Double quotes require backslash delimiter, i.e., if { [HTTP::host] starts_with \"myhost\"} - Linefeeds require backslash delimiter, if using LF for clarity, i.e., tmsh create /ltm rule test_rule \ when HTTP_REQUEST {\ if { [HTTP::host] starts_with \"myhost\" } } else {\ discard\ }\ }
+
+We use scripts for change control and create (most)everything at the console. Hope this helps.
+
+

@@ -45,4 +45,6 @@ Hope the above helps.
 
 ![Screen Capture from DevCentral](From_DevCentral.png)
 
+![Other Information from DevCentral](Other_Information.png)
+
 
