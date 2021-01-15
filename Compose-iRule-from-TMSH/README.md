@@ -29,8 +29,8 @@ with CLI (tmsh), you can write it as below:
 [root@BigIP:Active:Standalone] config  tmsh create ltm rule Test_iRules_CLI `echo "when HTTP_REQUEST { set Command [string map {/ \" \"} [HTTP::uri]] ; if { \\$Command eq \" \" } { HTTP::respond 200 content \"Usage: /Command/Argument_1/Argument_2/Argument_3/.../Argument_N/\\\r\\\n\" noserver \"Connection\" \"Close\" } else { HTTP::respond 200 content \"\\$Command\\\r\\\n\\\r\\\n[eval \\$Command]\\\r\\\n\\\r\\\n<--- [clock format [clock seconds] -format \"%Y-%m-%d %H:%M:%S\"] --->\\\r\\\n\" noserver \"Connection\" \"Close\" } }"`
 [root@BigIP:Active:Standalone] config 
 ```
-the result will be:
 
+the result will be:
 
 ```
 [root@BigIP:Active:Standalone] config  tmsh list ltm rule Test_iRules_CLI
@@ -39,6 +39,7 @@ ltm rule Test_iRules_CLI {
 }
 [root@BigIP:Active:Standalone] config 
 ```
+
 Hope the above helps.
 
 ![Screen Capture from DevCentral](From_DevCentral.png)
@@ -53,6 +54,10 @@ A few steps which hopefully can help (may NOT cover ALL possible cases):
       `$` to be replaced with `\\$`<br>
       `"` to be replaced with `\\"`<br>
       New Line character (usually represented with `\n` or `\r\n` to be replaced with ` ; ` (space, semicolon, space)
+
+
+
+***
 
 
 
