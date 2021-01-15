@@ -65,11 +65,9 @@ There are some other information (other way) from DevCentral, but it does not se
 <br><br><br>
 ```
 ╔═╦═════════════════╦═╗
-║ ║                 ║ ║
 ╠═╬═════════════════╬═╣
 ║ ║ End of Document ║ ║
 ╠═╬═════════════════╬═╣
-║ ║                 ║ ║
 ╚═╩═════════════════╩═╝
 ```
 <br><br><br>
