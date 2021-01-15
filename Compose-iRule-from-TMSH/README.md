@@ -41,10 +41,37 @@ ltm rule Test_iRules_CLI {
 ```
 Hope the above helps.
 
-
-
 ![Screen Capture from DevCentral](From_DevCentral.png)
 
+A few steps which hopefully can help (may NOT cover ALL possible cases):
+
+- [ ] Optimize the iRules first
+- [ ] Remove ALL Comments
+- [ ] Optionally, remove ALL unnecessary white spaces
+- [ ] Do NOT use character `!` in your iRules. Replace it with `not ( )`
+- [ ] Replace the following characters<br>
+      `$` to be replaced with `\\$`<br>
+      `"` to be replaced with `\\"`<br>
+      New Line character (usually represented with `\n` or `\r\n` to be replaced with ` ; ` (space, semicolon, space)
+
+
+
+There are some other information (other way) from DevCentral, but it does not seem to work anymore.
+
 ![Other Information from DevCentral](Other_Information.png)
+
+
+
+<br><br><br>
+```
+╔═╦═════════════════╦═╗
+║ ║                 ║ ║
+╠═╬═════════════════╬═╣
+║ ║ End of Document ║ ║
+╠═╬═════════════════╬═╣
+║ ║                 ║ ║
+╚═╩═════════════════╩═╝
+```
+<br><br><br>
 
 
