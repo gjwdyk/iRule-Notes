@@ -49,11 +49,12 @@ A few steps which hopefully can help (may NOT cover ALL possible cases):
 - [ ] Optimize the iRules first
 - [ ] Remove ALL Comments
 - [ ] Optionally, remove ALL unnecessary white spaces
-- [ ] Do NOT use character `!` in your iRules. Replace it with `not ( )`
+- [ ] Do NOT use character `!` in the iRules, including text in a string. For operand not, replace it with `not ( )`.
 - [ ] Replace the following characters<br>
-      `$` to be replaced with `\\$`<br>
-      `"` to be replaced with `\\"`<br>
-      New Line character (usually represented with `\n` or `\r\n` to be replaced with ` ; ` (space, semicolon, space)
+   - [ ] `\` to be replaced with `\\\`<br>
+   - [ ] `$` to be replaced with `\\$`<br>
+   - [ ] `"` to be replaced with `\\"`<br>
+   - [ ] New Line character (usually represented with `\n` or `\r\n` to be replaced with ` ; ` (space, semicolon, space). This may need extended search and replace mode.
 
 
 
